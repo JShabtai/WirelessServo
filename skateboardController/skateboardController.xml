@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/josh/projects/skateboardController/skateboardController/skateboardController.sch</source>
+    <date>Tue 26 Mar 2019 09:44:25 PM EDT</date>
+    <tool>Eeschema 5.0.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>skateboardController.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>nRF24L01P_SMD</value>
+      <footprint>myelin-kicad:NRF24L01P_SMD</footprint>
+      <datasheet>DOCUMENTATION</datasheet>
+      <libsource lib="nrf24l01p_smd" part="nRF24L01P_SMD" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C9AD420</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>R_US</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C9AD656</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="R_US">
+      <description>Resistor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_US</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="nrf24l01p_smd" part="nRF24L01P_SMD">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">nRF24L01P_SMD</field>
+        <field name="Footprint">myelin-kicad:NRF24L01P_SMD</field>
+        <field name="Datasheet">DOCUMENTATION</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="CE" type="input"/>
+        <pin num="4" name="CSN" type="input"/>
+        <pin num="5" name="SCK" type="input"/>
+        <pin num="6" name="MOSI" type="input"/>
+        <pin num="7" name="MISO" type="output"/>
+        <pin num="8" name="IRQ" type="output"/>
+        <pin num="9" name="NC" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="nrf24l01p_smd">
+      <uri>/home/josh/git/myelin-kicad-libraries/nrf24l01p_smd.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="2" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8"/>
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="3" name="Net-(R1-Pad1)">
+      <node ref="U1" pin="1"/>
+      <node ref="U1" pin="2"/>
+      <node ref="U1" pin="3"/>
+      <node ref="U1" pin="4"/>
+      <node ref="U1" pin="5"/>
+      <node ref="U1" pin="6"/>
+      <node ref="R1" pin="1"/>
+    </net>
+  </nets>
+</export>
